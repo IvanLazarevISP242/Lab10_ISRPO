@@ -40,3 +40,27 @@ Console.WriteLine();
 Console.WriteLine(anastasia.GetInfo());
 Console.WriteLine();
 Console.WriteLine(artem.GetInfo());
+Hero margarita = new Hero("Маргарита", 80);
+
+margarita.TakeDamage(30);
+margarita.Heal(15);
+margarita.GainExperience(50);
+
+bool margaritaAlive = margarita.IsAlive();
+Console.WriteLine($"Маргарита жива: {margaritaAlive}");
+
+Console.WriteLine(margarita.GetInfo());
+
+Product laptop = new Product("Ноутбук", 55000, 10);
+Product mouse = new Product("Компьютерная мышь", 1500, 25);
+
+laptop.Sell(3);
+laptop.Restock(5);
+laptop.Restock(-10);
+
+Console.WriteLine(laptop.GetProductInfo());
+Console.WriteLine($"Стоимость 2 ноутбуков: {laptop.CalculateTotalCost(2)} руб.");
+
+Console.WriteLine();
+
+Console.WriteLine(mouse.GetProductInfo());
