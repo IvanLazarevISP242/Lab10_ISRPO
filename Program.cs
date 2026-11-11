@@ -51,16 +51,16 @@ Console.WriteLine($"Маргарита жива: {margaritaAlive}");
 
 Console.WriteLine(margarita.GetInfo());
 
-Product laptop = new Product("Ноутбук", 55000, 10);
-Product mouse = new Product("Компьютерная мышь", 1500, 25);
+Product noyt = new Product("Ноут", 55000, 10);
+Product mice = new Product("Компьютерная мышь", 2500, 25);
 
-laptop.Sell(3);
-laptop.Restock(5);
-laptop.Restock(-10);
+noyt.Sell(3);
+noyt.Restock(5);
+noyt.Restock(-10);
 
-Console.WriteLine(laptop.GetProductInfo());
-Console.WriteLine($"Стоимость 2 ноутбуков: {laptop.CalculateTotalCost(2)} руб.");
+Console.WriteLine(noyt.GetProductInfo());
+Console.WriteLine($"Стоимость 2 ноутов: {noyt.CalculateTotalCost(2)} руб.");
 
 Console.WriteLine();
 
-Console.WriteLine(mouse.GetProductInfo());
+Console.WriteLine(mice.GetProductInfo());
