@@ -3,41 +3,50 @@ public class Hero {
     public int Health;
     public int Level;
     public int Experience;
-    public Hero(string name, int health)
-    {
+
+    public Hero(string name, int health) {
         Name = name;
         Health = health;
         Level = 1;
         Experience = 0;
     }
-    public void TakeDamage(int damage)
-    {
-        if (damage <= 0)
-        {
+
+    public void TakeDamage(int damage) {
+        if (damage <= 0) {
             return;
         }
 
         Health -= damage;
 
-        if (Health < 0)
-        {
+        if (Health < 0) {
             Health = 0;
         }
     }
-    public void Heal(int amount)
-    {
-        if (amount <= 0)
-        {
+
+    public void Heal(int amount) {
+        if (amount <= 0) {
             return;
         }
 
         Health += amount;
     }
-public void GainExperience(int amount) {
-    if (amount <= 0) {
-        return;
+
+    public void GainExperience(int amount) {
+        if (amount <= 0) {
+            return;
+        }
+
+        Experience += amount;
     }
 
-    Experience += amount;
-}
+    public bool IsAlive() {
+        return Health > 0;
+    }
+
+    public string GetInfo() {
+        return $">>> {Name} <<<\n" +
+               $"Здоровье: {Health}\n" +
+               $"Уровень: {Level}\n" +
+               $"Опыт: {Experience}";
+    }
 }
